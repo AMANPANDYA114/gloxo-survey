@@ -96,7 +96,9 @@ const nav=`<header id="hd"><div class="wrap nav">
 <a href="era-bureau-overview.pdf" download><b>1</b> Overview – Galxoopinion</a>
 <a href="india-b2b-panel-book.pdf" download><b>2</b> India B2B Panel Book</a>
 <a href="era-guide-research-responder.pdf" download><b>3</b> Era Guide to Research Responder</a></div></div>
-<a href="contact.html">Contact</a><a href="contact.html" class="btn btn-p">join now</a></nav></div></header><div class="ov" id="ov"></div>`;
+<a href="contact.html">Contact</a><a href="https://dashboard.glaxoresearch.com/login" class="btn btn-p">
+  join now
+</a></nav></div></header><div class="ov" id="ov"></div>`;
 // const foot=`<section style="padding-top:20px"><div class="wrap"><div class="cta-b"><h2>Let's Turn Your Questions Into Insights</h2><p>Tell us about your research needs and get a free proposal within 24 hours.</p><a href="contact.html" class="btn btn-p">Get a Free Quote</a></div></div></section>
 // <footer><div class="wrap"><div class="fg">
 // <div><a href="index.html" class="logo" style="margin-bottom:14px"><i>◎</i>Galxoopinion</a><p style="font-size:.92rem">A full-service market research company delivering reliable data and insights worldwide.</p></div>
