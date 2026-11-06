@@ -86,7 +86,7 @@ const IN = [
 ];
 
 const nav=`<header id="hd"><div class="wrap nav">
-<a href="index.html" class="logo"><i>◎</i>Galxoopinion</a>
+<a href="index.html" class="logo" aria-label="Galxoopinion"><img src="Galxoopinion_Survey.png" alt="Galxoopinion" class="logo-img"></a>
 <button class="burger" id="bg" aria-label="Menu">☰</button>
 <nav class="menu" id="mn"><button class="close" id="cl" aria-label="Close">✕</button>
 <a href="index.html">Home</a><a href="about.html">About</a>
@@ -136,8 +136,8 @@ ${isHomePage ? `
     <div class="fg">
 
       <div>
-        <a href="index.html" class="logo" style="margin-bottom:14px">
-          <i>◎</i>Galxoopinion
+        <a href="index.html" class="logo" aria-label="Galxoopinion" style="margin-bottom:14px">
+          <img src="Galxoopinion_Survey.png" alt="Galxoopinion" class="logo-img">
         </a>
         <p style="font-size:.92rem">
           Share your opinions through online surveys, earn points
@@ -178,6 +178,42 @@ ${isHomePage ? `
 
 document.getElementById('hdr').outerHTML = nav;
 document.getElementById('ftr').outerHTML = foot;
+
+/* Logo image sizing (change the px values to resize) */
+// (function(){
+//   const st=document.createElement('style');
+//   st.textContent='.logo-img{display:block;width:auto!important;object-fit:contain}#hd .logo-img{height:40px!important}footer .logo-img{height:40px!important}@media (min-width:481px){#hd .logo-img{height:44px!important}footer .logo-img{height:40px!important}}@media (min-width:769px){#hd .logo-img{height:42px!important}footer .logo-img{height:40px!important}}';
+//   document.head.appendChild(st);
+// })();
+(function(){
+  const st=document.createElement('style');
+  st.textContent=`
+    .logo-img{
+      display:block;
+      width:auto!important;
+      object-fit:contain;
+    }
+
+    #hd .logo-img{height:40px!important}
+    footer .logo-img{height:40px!important}
+
+    @media (min-width:481px){
+      #hd .logo-img{height:44px!important}
+      footer .logo-img{height:40px!important}
+    }
+
+    @media (min-width:769px){
+      #hd .logo-img{height:52px!important}
+      footer .logo-img{height:44px!important}
+    }
+
+    @media (min-width:1200px){
+      #hd .logo-img{height:56px!important}
+      footer .logo-img{height:46px!important}
+    }
+  `;
+  document.head.appendChild(st);
+})();
 
 const $=id=>document.getElementById(id),hd=$('hd'),mn=$('mn'),ov=$('ov');
 const f=location.pathname.split('/').pop()||'index.html';
